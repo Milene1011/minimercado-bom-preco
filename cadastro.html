@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente - Minimercado Bom Preço</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header com Bootstrap e estilos personalizados -->
+    <header class="custom-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Minimercado Bom Preço</h1>
+                <p>Sua loja de confiança no bairro</p>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid justify-content-center">
+                    <ul class="navbar-nav custom-nav d-flex flex-row">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicos.html">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cadastro.html" aria-current="page">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center fade-in-up">
+                        <h2>Cadastro de Cliente</h2>
+                        <p>Preencha seus dados para criar sua conta e agilizar suas compras e agendamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Cadastro -->
+        <section class="container my-5 form-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="form-container">
+                        <h3 class="text-primary text-center mb-4">Seus Dados</h3>
+                        <form id="form-cadastro">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="nome" class="form-label">Nome Completo <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="nome" placeholder="Seu nome e sobrenome" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="cpf" class="form-label">CPF <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required maxlength="14">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="endereco" class="form-label">Endereço Completo <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="endereco" placeholder="Rua, número, bairro, cidade, estado" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="telefone" class="form-label">Telefone <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="telefone" placeholder="(99) 99999-9999" required maxlength="15">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" placeholder="seu.email@exemplo.com" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="form-label">Sexo <span class="text-danger">*</span></label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexo-masculino" value="masculino" required>
+                                        <label class="form-check-label" for="sexo-masculino">Masculino</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexo-feminino" value="feminino">
+                                        <label class="form-check-label" for="sexo-feminino">Feminino</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="sexo" id="sexo-outro" value="outro">
+                                        <label class="form-check-label" for="sexo-outro">Outro</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termos" required>
+                                    <label class="form-check-label" for="termos">
+                                        Concordo com os <a href="#" class="text-primary">Termos de Serviço</a> <span class="text-danger">*</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-custom btn-lg">Cadastrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Agendamento (para ser incluída aqui ou em outra página) -->
+        <section class="container my-5 calendar-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <h3 class="calendar-header mb-4">Agendamento de Entrega ou Retirada</h3>
+                    <form id="form-agendamento">
+                        <div class="form-group mb-3">
+                            <label class="form-label">Tipo de Serviço <span class="text-danger">*</span></label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipo-servico" id="retirada" value="retirada" required>
+                                    <label class="form-check-label" for="retirada">Retirada no Local</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipo-servico" id="entrega" value="entrega">
+                                    <label class="form-check-label" for="entrega">Tele-entrega</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="data-agendamento" class="form-label">Data <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="data-agendamento" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="horario-agendamento" class="form-label">Horário <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="horario-agendamento" required>
+                                        <option value="">Selecione um horário</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="campos-entrega" style="display: none;">
+                            <div class="form-group mb-3">
+                                <label for="cep-entrega" class="form-label">CEP para Entrega <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="cep-entrega" placeholder="00000-000" maxlength="9">
+                                <small class="form-text text-muted">A taxa de entrega será calculada com base no CEP.</small>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="form-label">Taxa de Entrega:</label>
+                                <span id="taxa-entrega" class="ms-2">R$ 0,00</span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-custom btn-lg">Agendar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Minimercado Bom Preço. Todos os direitos reservados.</p>
+                <p>Endereço: Rua das Flores, 123 - Centro - Porto Alegre/RS</p>
+                <p>Telefone: (51) 3333-4444 | Email: contato@minimercadobompreco.com.br</p>
+                <nav class="footer-nav">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="produtos.html" class="nav-link">Produtos</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="contato.html" class="nav-link">Contato</a>
+                    <a href="cadastro.html" class="nav-link">Cadastro</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+

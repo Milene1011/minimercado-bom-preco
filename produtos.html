@@ -4,30 +4,301 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Minimercado Bom Preço</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Minimercado Bom Preço</h1>
-        <p>Sua loja de confiança no bairro</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <!-- Header com Bootstrap e estilos personalizados -->
+    <header class="custom-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Minimercado Bom Preço</h1>
+                <p>Sua loja de confiança no bairro</p>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid justify-content-center">
+                    <ul class="navbar-nav custom-nav d-flex flex-row">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="produtos.html" aria-current="page">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicos.html">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h2>Nossos Produtos</h2>
+        <!-- Seção Hero -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center fade-in-up">
+                        <h2>Nossos Produtos</h2>
+                        <p>Descubra nossa seleção de produtos frescos e de qualidade, organizados por categorias para facilitar suas compras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section>
-            <h3>Frutas e Verduras</h3>
+        <!-- Seção Frutas e Verduras -->
+        <section id="frutas-verduras" class="container my-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h3 class="text-primary">Frutas e Verduras</h3>
+                    <p class="text-muted">Produtos frescos selecionados diariamente, direto do CEASA</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="images/frutas_verduras_1.jpg" alt="Seção de frutas frescas com variedade de produtos incluindo abacaxi, melão, mamão, bananas e outras frutas">
+                        <div class="product-card-body">
+                            <h4>Seção de Frutas Frescas</h4>
+                            <p>Variedade completa de frutas frescas selecionadas diariamente, incluindo abacaxi, melão, mamão, bananas e muito mais. Produtos de primeira qualidade direto do CEASA.</p>
+                            <div class="product-price">A partir de R$ 2,50/kg</div>
+                            <button class="btn btn-custom mt-2" onclick="adicionarAoCarrinho('frutas-frescas')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="images/frutas_verduras_2.jpg" alt="Verduras e legumes frescos organizados em prateleiras com variedade de cores e tipos">
+                        <div class="product-card-body">
+                            <h4>Verduras e Legumes Frescos</h4>
+                            <p>Seleção completa de verduras e legumes frescos, incluindo alface, tomate, cenoura, abobrinha e muito mais. Colhidos frescos para garantir qualidade.</p>
+                            <div class="product-price">A partir de R$ 1,80/kg</div>
+                            <button class="btn btn-custom mt-2" onclick="adicionarAoCarrinho('verduras-legumes')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Produtos Não Perecíveis -->
+        <section id="nao-pereciveis" class="services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="text-primary">Produtos Alimentícios Não Perecíveis</h3>
+                        <p class="text-muted">Essenciais para sua despensa com as melhores marcas</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="product-card">
+                            <img src="images/nao_pereciveis_1.jpg" alt="Cesta básica completa com produtos essenciais como arroz, feijão, óleo, açúcar e outros itens">
+                            <div class="product-card-body">
+                                <h4>Cesta Básica Completa</h4>
+                                <p>Uma ampla variedade de produtos essenciais para sua despensa, incluindo arroz, feijão, óleo, açúcar, sal e outros itens básicos de qualidade.</p>
+                                <div class="product-price">R$ 89,90</div>
+                                <button class="btn btn-custom mt-2" onclick="adicionarAoCarrinho('cesta-basica')">Adicionar ao Carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="product-card">
+                            <img src="images/nao_pereciveis_2.jpg" alt="Kit produtos essenciais com itens variados para despensa doméstica">
+                            <div class="product-card-body">
+                                <h4>Kit Produtos Essenciais</h4>
+                                <p>Conjunto selecionado de produtos não perecíveis para o dia a dia, incluindo massas, molhos, temperos e conservas de marcas reconhecidas.</p>
+                                <div class="product-price">R$ 45,50</div>
+                                <button class="btn btn-custom mt-2" onclick="adicionarAoCarrinho('kit-essenciais')">Adicionar ao Carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Higiene e Limpeza -->
+        <section id="higiene-limpeza" class="container my-5">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h3 class="text-primary">Produtos de Higiene e Limpeza</h3>
+                    <p class="text-muted">Tudo para manter sua casa limpa e organizada</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="images/higiene_limpeza_1.jpg" alt="Produtos de higiene pessoal incluindo shampoos, sabonetes, cremes dentais e outros itens">
+                        <div class="product-card-body">
+                            <h4>Kit Higiene Pessoal</h4>
+                            <p>Conjunto completo de produtos para higiene pessoal, incluindo shampoo, condicionador, sabonete, creme dental e desodorante de marcas confiáveis.</p>
+                            <div class="product-price">R$ 32,90</div>
+                            <button class="btn btn-custom mt-2" onclick="adicionarAoCarrinho('kit-higiene')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="product-card">
+                        <img src="images/higiene_limpeza_2.jpg" alt="Produtos de limpeza doméstica com detergentes, desinfetantes e outros produtos de limpeza">
+                        <div class="product-card-body">
+                            <h4>Kit Limpeza Doméstica</h4>
+                            <p>Tudo que você precisa para manter sua casa limpa e organizada, incluindo detergente, desinfetante, água sanitária e produtos multiuso.</p>
+                            <div class="product-price">R$ 28,70</div>
+                            <button class="btn btn-custom mt-2" onclick="adicionarAoCarrinho('kit-limpeza')">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Carrinho -->
+        <section class="container my-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-info" id="carrinho-info" style="display: none;">
+                        <h5>🛒 Carrinho de Compras</h5>
+                        <div id="itens-carrinho"></div>
+                        <div class="mt-3">
+                            <strong>Total: R$ <span id="total-carrinho">0,00</span></strong>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-success me-2" onclick="finalizarCompra()">Finalizar Compra</button>
+                            <button class="btn btn-outline-secondary" onclick="limparCarrinho()">Limpar Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Promoções -->
+        <section class="services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="text-primary">Promoções da Semana</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="service-item">
+                            <strong>🍎 Frutas:</strong> Compre 2kg e leve 3kg - Válido para frutas selecionadas
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="service-item">
+                            <strong>🛒 Cesta Básica:</strong> 15% de desconto na compra de 2 cestas ou mais
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="service-item">
+                            <strong>🧽 Limpeza:</strong> Na compra de R$ 50 em produtos de limpeza, ganhe 1 esponja grátis
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Minimercado Bom Preço. Todos os direitos reservados.</p>
+                <p>Endereço: Rua das Flores, 123 - Centro - Porto Alegre/RS</p>
+                <p>Telefone: (51) 3333-4444 | Email: contato@minimercadobompreco.com.br</p>
+                <nav class="footer-nav">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="produtos.html" class="nav-link">Produtos</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="contato.html" class="nav-link">Contato</a>
+                    <a href="cadastro.html" class="nav-link">Cadastro</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
+    <!-- JavaScript específico para produtos -->
+    <script>
+        // Carrinho de compras simples
+        let carrinho = [];
+        
+        function adicionarAoCarrinho(produto) {
+            const produtos = {
+                'frutas-frescas': { nome: 'Frutas Frescas', preco: 2.50 },
+                'verduras-legumes': { nome: 'Verduras e Legumes', preco: 1.80 },
+                'cesta-basica': { nome: 'Cesta Básica Completa', preco: 89.90 },
+                'kit-essenciais': { nome: 'Kit Produtos Essenciais', preco: 45.50 },
+                'kit-higiene': { nome: 'Kit Higiene Pessoal', preco: 32.90 },
+                'kit-limpeza': { nome: 'Kit Limpeza Doméstica', preco: 28.70 }
+            };
             
-            <article>
-                <h4>Seção de Frutas Frescas</h4>
-                <img src="images/frutas_verduras_1.jpg" alt="Seção de frutas frescas do minimercado" width="300">
+            if (produtos[produto]) {
+                carrinho.push(produtos[produto]);
+                atualizarCarrinho();
+                anunciarMudanca(`${produtos[produto].nome} adicionado ao carrinho`);
+            }
+        }
+        
+        function atualizarCarrinho() {
+            const carrinhoInfo = document.getElementById('carrinho-info');
+            const itensCarrinho = document.getElementById('itens-carrinho');
+            const totalCarrinho = document.getElementById('total-carrinho');
+            
+            if (carrinho.length > 0) {
+                carrinhoInfo.style.display = 'block';
+                
+                let html = '<ul class="list-unstyled">';
+                let total = 0;
+                
+                carrinho.forEach((item, index) => {
+                    html += `<li>• ${item.nome} - R$ ${item.preco.toFixed(2)} 
+                            <button class="btn btn-sm btn-outline-danger ms-2" onclick="removerDoCarrinho(${index})">Remover</button></li>`;
+                    total += item.preco;
+                });
+                
+                html += '</ul>';
+                itensCarrinho.innerHTML = html;
+                totalCarrinho.textContent = total.toFixed(2);
+            } else {
+                carrinhoInfo.style.display = 'none';
+            }
+        }
+        
+        function removerDoCarrinho(index) {
+            const item = carrinho[index];
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
+            anunciarMudanca(`${item.nome} removido do carrinho`);
+        }
+        
+        function limparCarrinho() {
+            carrinho = [];
+            atualizarCarrinho();
+            anunciarMudanca('Carrinho limpo');
+        }
+        
+        function finalizarCompra() {
+            if (carrinho.length > 0) {
+                alert(`Compra finalizada! Total: R$ ${carrinho.reduce((total, item) => total + item.preco, 0).toFixed(2)}\n\nRedirecionando para o cadastro...`);
+                window.location.href = 'cadastro.html';
+            } else {
+                alert('Carrinho vazio! Adicione produtos antes de finalizar a compra.');
+            }
+        }
+    </script>
+</body>
+</html>
                 <p><strong>Descrição:</strong> Variedade completa de frutas frescas selecionadas diariamente, incluindo abacaxi, melão, mamão, bananas e muito mais. Produtos de primeira qualidade direto do CEASA.</p>
                 <p><strong>Preço:</strong> A partir de R$ 2,50/kg</p>
             </article>

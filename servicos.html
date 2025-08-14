@@ -4,79 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Minimercado Bom Preço</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Minimercado Bom Preço</h1>
-        <p>Sua loja de confiança no bairro</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <!-- Header com Bootstrap e estilos personalizados -->
+    <header class="custom-header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Minimercado Bom Preço</h1>
+                <p>Sua loja de confiança no bairro</p>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid justify-content-center">
+                    <ul class="navbar-nav custom-nav d-flex flex-row">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="servicos.html" aria-current="page">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h2>Nossos Serviços</h2>
-
-        <section>
-            <article>
-                <h3>Retirada no Local</h3>
-                <p><strong>Descrição:</strong> Faça seu pedido por telefone ou WhatsApp e retire na loja no horário que for mais conveniente para você. Nossos funcionários separam seus produtos com cuidado e atenção, garantindo a qualidade e frescor dos itens selecionados.</p>
-                <p><strong>Horário de Funcionamento:</strong> Segunda a sábado das 7h às 22h, domingos das 8h às 18h</p>
-                <p><strong>Valor:</strong> Serviço gratuito</p>
-                <p><strong>Tempo de Preparo:</strong> 30 minutos para pedidos até R$ 50,00 | 1 hora para pedidos acima de R$ 50,00</p>
-            </article>
-
-            <article>
-                <h3>Tele-entrega</h3>
-                <p><strong>Descrição:</strong> Entregamos seus produtos diretamente na sua casa ou local de trabalho com rapidez e segurança. Nossa equipe de entregadores é treinada para garantir que seus produtos cheguem em perfeitas condições, mantendo a cadeia de frio para produtos perecíveis.</p>
-                <p><strong>Área de Atendimento:</strong> Bairros Centro, Cidade Baixa, Menino Deus, Praia de Belas e adjacências (raio de 3km da loja)</p>
-                <p><strong>Valor:</strong> R$ 5,00 para pedidos até R$ 80,00 | Grátis para pedidos acima de R$ 80,00</p>
-                <p><strong>Tempo de Entrega:</strong> 45 minutos a 1h30min (dependendo da localização e volume do pedido)</p>
-                <p><strong>Horário de Entrega:</strong> Segunda a sábado das 8h às 21h, domingos das 9h às 17h</p>
-            </article>
+        <!-- Seção Hero -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center fade-in-up">
+                        <h2>Nossos Serviços</h2>
+                        <p>Oferecemos duas modalidades de atendimento para sua comodidade: retirada no local ou entrega em domicílio.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h3>Como Fazer seu Pedido</h3>
-            <ol>
-                <li>Entre em contato conosco pelo telefone (51) 3333-4444 ou WhatsApp (51) 99999-8888</li>
-                <li>Informe os produtos desejados e suas quantidades</li>
-                <li>Escolha entre retirada no local ou tele-entrega</li>
-                <li>Confirme seu endereço (para entrega) e forma de pagamento</li>
-                <li>Aguarde a confirmação do pedido e tempo estimado</li>
-            </ol>
+        <!-- Seção de Serviços Principais -->
+        <section class="container my-5">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-card-body">
+                            <h3 class="text-primary">🏪 Retirada no Local</h3>
+                            <p><strong>Descrição:</strong> Faça seu pedido por telefone ou WhatsApp e retire na loja no horário que for mais conveniente para você. Nossos funcionários separam seus produtos com cuidado e atenção, garantindo a qualidade e frescor dos itens selecionados.</p>
+                            
+                            <div class="mb-3">
+                                <strong>Horário de Funcionamento:</strong>
+                                <ul class="list-unstyled mt-2">
+                                    <li>📅 Segunda a Sábado: 7h às 22h</li>
+                                    <li>📅 Domingos: 8h às 18h</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <strong>Como Funciona:</strong>
+                                <ol class="mt-2">
+                                    <li>Ligue para (51) 3333-4444 ou envie WhatsApp</li>
+                                    <li>Informe os produtos desejados</li>
+                                    <li>Agende o horário de retirada</li>
+                                    <li>Retire na loja e pague na hora</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="product-price text-success">Serviço Gratuito</div>
+                            <a href="cadastro.html" class="btn btn-custom mt-3">Agendar Retirada</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="product-card">
+                        <div class="product-card-body">
+                            <h3 class="text-primary">🚚 Tele-entrega</h3>
+                            <p><strong>Descrição:</strong> Entregamos seus produtos diretamente em sua casa ou local de trabalho, com rapidez e segurança. Nossos entregadores são treinados para manter a qualidade dos produtos durante o transporte.</p>
+                            
+                            <div class="mb-3">
+                                <strong>Horário de Entrega:</strong>
+                                <ul class="list-unstyled mt-2">
+                                    <li>📅 Segunda a Sábado: 8h às 21h</li>
+                                    <li>📅 Domingos: 9h às 17h</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <strong>Como Funciona:</strong>
+                                <ol class="mt-2">
+                                    <li>Ligue para (51) 3333-4444 ou envie WhatsApp</li>
+                                    <li>Informe os produtos e endereço de entrega</li>
+                                    <li>Agende o horário de entrega</li>
+                                    <li>Receba em casa e pague na entrega</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <strong>Taxa de Entrega:</strong>
+                                <ul class="list-unstyled mt-2">
+                                    <li>🏠 Porto Alegre e região: R$ 5,00</li>
+                                    <li>🏠 Outras regiões: R$ 10,00</li>
+                                    <li>🎁 Grátis para compras acima de R$ 100,00</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="product-price">A partir de R$ 5,00</div>
+                            <a href="cadastro.html" class="btn btn-custom mt-3">Agendar Entrega</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h3>Formas de Pagamento</h3>
-            <ul>
-                <li>Dinheiro</li>
-                <li>Cartão de débito</li>
-                <li>Cartão de crédito (Visa, Mastercard, Elo)</li>
-                <li>PIX</li>
-                <li>Vale-alimentação (Sodexo, Alelo, Ticket)</li>
-            </ul>
+        <!-- Seção de Informações Adicionais -->
+        <section class="services-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="text-primary">Informações Importantes</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="service-item">
+                            <strong>💳 Formas de Pagamento:</strong> Dinheiro, PIX, cartão de débito e crédito (Visa, Mastercard)
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="service-item">
+                            <strong>📱 Pedidos:</strong> Telefone (51) 3333-4444 ou WhatsApp (51) 99999-8888
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="service-item">
+                            <strong>⏰ Tempo de Entrega:</strong> 30 a 60 minutos após confirmação do pedido
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="service-item">
+                            <strong>📦 Pedido Mínimo:</strong> R$ 20,00 para retirada | R$ 30,00 para entrega
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-item">
+                            <strong>🔄 Política de Troca:</strong> Produtos com defeito podem ser trocados em até 7 dias
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Status da Loja -->
+        <section class="container my-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="alert alert-info" id="status-loja">
+                        <h4>Status da Loja</h4>
+                        <p class="mb-0">Verificando status...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato Rápido -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="form-container text-center">
+                        <h3 class="text-primary mb-4">Faça seu Pedido Agora</h3>
+                        <p class="mb-4">Entre em contato conosco pelos canais abaixo ou use nosso formulário de cadastro para agilizar seus pedidos futuros.</p>
+                        
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <a href="tel:+5551333344444" class="btn btn-outline-primary btn-lg w-100">
+                                    📞 Ligar Agora
+                                </a>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="https://wa.me/5551999998888" class="btn btn-success btn-lg w-100" target="_blank">
+                                    💬 WhatsApp
+                                </a>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="cadastro.html" class="btn btn-custom btn-lg w-100">
+                                    📝 Cadastrar-se
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Minimercado Bom Preço. Todos os direitos reservados.</p>
-        <p>Endereço: Rua das Flores, 123 - Centro - Porto Alegre/RS</p>
-        <p>Telefone: (51) 3333-4444 | Email: contato@minimercadobompreco.com.br</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Minimercado Bom Preço. Todos os direitos reservados.</p>
+                <p>Endereço: Rua das Flores, 123 - Centro - Porto Alegre/RS</p>
+                <p>Telefone: (51) 3333-4444 | Email: contato@minimercadobompreco.com.br</p>
+                <nav class="footer-nav">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="produtos.html" class="nav-link">Produtos</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="contato.html" class="nav-link">Contato</a>
+                    <a href="cadastro.html" class="nav-link">Cadastro</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
 </body>
 </html>
-
